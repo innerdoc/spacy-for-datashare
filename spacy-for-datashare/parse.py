@@ -214,32 +214,6 @@ def get_entity(doc_id, doc, e, bulk_dict, language=LANGUAGE, index_name=ES_INDEX
     nfkd_form = unicodedata.normalize('NFKD', e.text) # Datashare doesnt use special characters like ọàbúròẹlẹ́wàâêî,ôûçÇ in ES
     mention_text = nfkd_form.encode('ASCII', 'ignore').decode()
 
-    '''for l in e.text:
-        ord_l = ord(l)
-        if ord_l < 0 or ord_l > 256 or not ord_l:
-            print(f'>>{e.text}<<')
-            print(f'>>{mention_text}<<')
-            print(f'{l} : {ord(l)}')
-            try:
-                print(unicodedata.name(l))
-            except:
-                print('UNKNOWN NAME')
-            try:
-                print(unicodedata.category(l))
-            except:
-                print('UNKNOWN CATEGORY')
-
-    if e.text != mention_text and False:
-        print(f'>>{mention_text}<<')
-        try:
-            print(unicodedata.name(e.text[0]))
-        except:
-            print('UNKNOWN NAME')
-        try:
-            print(unicodedata.category(e.text[0]))
-        except:
-            print('UNKNOWN CATEGORY')
-    '''
     # determine the offset for the entity (position in text)
     if e.label_ in ('MONEY'):
         start_token = end_token = e.start
