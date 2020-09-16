@@ -28,12 +28,14 @@ datashare.registerFilter({
 
 
 # Settings
-- SPACY_MODEL = './data/spacy_model/nl-0.0.5/model-best' # local model or spacy default models like nl_core_news_sm
-- PREPROCESS_TIKA_OUTPUT=True
-- SKIP_ALREADY_PARSED_DOCS = False
-- CLEAN_ENTITIES_BEFORE_UPDATE = True
-- ES_BASE_URL = 'http://10.0.2.2:9200/' # e.g. for VMbox=10.0.2.2:9200 , for local installation=127.0.0.1:9200
-- ACCEPTED_SPACY_LABELS = ('PER', 'ORG', 'GPE', 'PER_C', 'ORG_C', 'NORP', 'LOC', 'EMAIL', 'URL', 'MONEY') # depends on spaCy model
+```python
+SPACY_MODEL = './data/spacy_model/nl-0.0.5/model-best' # local model or spacy default models like nl_core_news_sm
+PREPROCESS_TIKA_OUTPUT = True
+SKIP_ALREADY_PARSED_DOCS = False
+CLEAN_ENTITIES_BEFORE_UPDATE = True
+ES_BASE_URL = 'http://10.0.2.2:9200/' # e.g. for VMbox=10.0.2.2:9200 , for local installation=127.0.0.1:9200
+ACCEPTED_SPACY_LABELS = ('PER', 'ORG', 'GPE', 'PER_C', 'ORG_C', 'NORP', 'LOC', 'EMAIL', 'URL', 'MONEY') # depends on spaCy model
+```
 
 
 # Steps taken by script
