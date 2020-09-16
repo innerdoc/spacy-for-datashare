@@ -16,19 +16,8 @@ The idea: Datashare is a java-based platform that uses [Apache Tika](https://tik
 - [install Datashare](https://icij.gitbook.io/datashare/)
 - upload documents to Datashare
 - make your custom NER-filter visible in Datashare
-  - add your plugins location `--pluginsDir "C:\Users\Name\AppData\Roaming\Datashare\plugins"` to `"C:\program files\Datashare-${VERSION}\datashareStandalone.bat"` 
-  - register filter in index.js in plugins folder
-```javascript
-datashare.registerFilter({
-  type: 'FilterNamedEntity',
-  options: {
-    name: 'EMAIL',
-    key: 'byMentions',
-    category: 'EMAIL',
-    isSearchable: true
-  }
-})
-```
+  - add your plugins-folder location, e.g. `--pluginsDir "C:\Users\Name\AppData\Roaming\Datashare\plugins"` (Windows) to `"C:\program files\Datashare-${VERSION}\datashareStandalone.bat"` 
+  - register a new filter via a index.js file in the plugins folder. For examples, see the [plugins folder](./plugins)
 
 
 # Settings
