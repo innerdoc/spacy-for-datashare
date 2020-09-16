@@ -15,9 +15,14 @@ The idea: Datashare is a java-based platform that uses [Apache Tika](https://tik
 # Prerequisites
 - [install Datashare](https://icij.gitbook.io/datashare/)
 - upload documents to Datashare
-- make your custom NER-filter visible in Datashare
+- make your custom NER-filter visible in Datashare (for details, [look here](https://github.com/ICIJ/datashare/wiki/Client-%E2%80%BA-Plugins))
   - add your plugins-folder location, e.g. `--pluginsDir "C:\Users\Name\AppData\Roaming\Datashare\plugins"` (Windows) to `"C:\program files\Datashare-${VERSION}\datashareStandalone.bat"` 
   - register a new filter via a index.js file in the plugins folder. For examples, see the [plugins folder](./plugins)
+- Use Python 3.8 or higher and install these python libraries
+  - "tqdm>=4.0.0"
+  - "spacy>=2.2.0"
+  - "price_parser>=0.3.0"
+
 
 
 # Settings
@@ -40,6 +45,7 @@ ES_BASE_URL = 'http://10.0.2.2:9200/'
 # Named Entity labels; depend on your spaCy model
 ACCEPTED_SPACY_LABELS = ('PER', 'ORG', 'GPE', 'PER_C', 'ORG_C', 'NORP', 'LOC', 'EMAIL', 'URL', 'MONEY') 
 ```
+
 
 
 # Steps taken by script
