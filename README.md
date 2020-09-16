@@ -51,3 +51,7 @@ ACCEPTED_SPACY_LABELS = ('PER', 'ORG', 'GPE', 'PER_C', 'ORG_C', 'NORP', 'LOC', '
 - Bulk index the document updates and new Named Entities to ES-index
 - Refresh ES-index
 
+
+
+![alt text](run-script.png "Logging from running the script")
+

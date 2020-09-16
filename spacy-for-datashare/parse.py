@@ -97,13 +97,13 @@ def run_es_command(http_method, url_command, json, headers=ES_URL_HEADERS):
 def es_search_docs(es_base_url=ES_BASE_URL, skip=SKIP_ALREADY_PARSED_DOCS, parsed_tag=PARSED_TAG, language=LANGUAGE, size=ES_SEARCH_SIZE):
     # get all non-spacy-parsed documents 
     if skip:
-        print(f'\033[92m\u2713 Skip already parsed docs\033[00m')
+        print(f'\u2713 Skip already parsed docs')
         search_url = f'{es_base_url}_search?q=language:{language}%20AND%20type:Document%20AND%20NOT%20tags:{parsed_tag}&size={size}'
     else:
-        print(f'\033[92m\u2713 Also select already parsed docs\033[00m')
+        print(f'\u2713 Also select already parsed docs')
         search_url = f'{es_base_url}_search?q=language:{language}%20AND%20type:Document&size={size}'
 
-    print(f'\033[92m\u2713 {search_url}\033[00m')
+    print(f'\u2713 {search_url}')
     response = run_es_command('GET', search_url, None)
 
     if response.status_code != 200:
